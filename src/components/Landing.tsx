@@ -18,7 +18,7 @@ const Landing = () => {
       
       if (newProgress >= 100) {
         clearInterval(timer);
-        navigate('/home'); // Navigate to main app after loading
+        navigate('/auth'); // Navigate to auth screen after loading
       } else {
         setProgress(newProgress);
       }
