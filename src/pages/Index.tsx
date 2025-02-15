@@ -1,12 +1,16 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { useState } from "react";
+import Navigation from "@/components/Navigation";
+import AISolve from "@/components/AISolve";
+import Ranking from "@/components/Ranking";
 
 const Index = () => {
+  const [activeTab, setActiveTab] = useState<"ai" | "ranking">("ai");
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="h-full flex flex-col bg-gradient-to-b from-background to-secondary/20">
+      {activeTab === "ai" ? <AISolve /> : <Ranking />}
+      <Navigation activeTab={activeTab} onTabChange={setActiveTab} />
     </div>
   );
 };
