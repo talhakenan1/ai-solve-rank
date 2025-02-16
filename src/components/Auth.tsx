@@ -80,7 +80,7 @@ const Auth = () => {
 
       <div className="w-32 h-32 mb-8">
         <img
-          src="/lovable-uploads/0e65a0d7-d589-4b4d-8666-f156cb26f4e7.png"
+          src="/lovable-uploads/182cafca-ead2-49d3-b652-abae596bbea2.png"
           alt="AI Solve Logo"
           className="w-full h-full object-contain"
         />

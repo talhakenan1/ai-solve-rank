@@ -28,11 +28,16 @@ const Settings = () => {
   return (
     <div className="flex-1 p-4 pb-20 max-w-md mx-auto space-y-4">
       <div className="flex items-center justify-between p-4 bg-card rounded-lg">
-        <div className="flex items-center space-x-2">
-          {isDarkMode ? <Moon className="w-4 h-4" /> : <Sun className="w-4 h-4" />}
-          <span>Dark Mode</span>
+        <span>Theme</span>
+        <div className="flex items-center gap-2">
+          {isDarkMode ? (
+            <Moon className="w-4 h-4 text-muted-foreground" />
+          ) : null}
+          <Switch checked={isDarkMode} onCheckedChange={setIsDarkMode} />
+          {!isDarkMode ? (
+            <Sun className="w-4 h-4 text-muted-foreground" />
+          ) : null}
         </div>
-        <Switch checked={isDarkMode} onCheckedChange={setIsDarkMode} />
       </div>
 
       <Button variant="outline" className="w-full justify-start">
