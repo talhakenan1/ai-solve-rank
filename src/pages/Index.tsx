@@ -8,7 +8,7 @@ const Index = () => {
   const [activeTab, setActiveTab] = useState<"ai" | "ranking">("ai");
 
   return (
-    <div className="h-full flex flex-col bg-gradient-to-b from-background to-secondary/20 pt-16">
+    <div className="h-full flex flex-col bg-gradient-to-b from-background to-secondary/20">
       {activeTab === "ai" ? <AISolve /> : <Ranking />}
       <Navigation activeTab={activeTab} onTabChange={setActiveTab} />
     </div>
