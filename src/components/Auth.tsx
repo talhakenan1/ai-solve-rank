@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Eye, EyeOff } from "lucide-react";
@@ -6,6 +5,14 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
 import { z } from "zod";
+import { LogOut, Settings, User } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 
 const passwordSchema = z
   .string()
@@ -58,8 +65,19 @@ const Auth = () => {
     navigate("/home");
   };
 
+  const handlePass = () => {
+    navigate('/home');
+  };
+
   return (
-    <div className="h-full flex flex-col items-center justify-center bg-background p-4">
+    <div className="h-full flex flex-col items-center justify-center bg-background p-4 relative">
+      <button
+        onClick={handlePass}
+        className="absolute top-4 right-4 px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors"
+      >
+        PASS
+      </button>
+
       <div className="w-32 h-32 mb-8">
         <img
           src="/lovable-uploads/0e65a0d7-d589-4b4d-8666-f156cb26f4e7.png"

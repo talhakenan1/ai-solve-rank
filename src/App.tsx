@@ -20,7 +20,9 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/auth" element={<Auth />} />
-          <Route path="/home" element={<Index />} />
+          <Route path="/home/*" element={<Index />} />
+          <Route path="/profile" element={<div className="p-4">Profile Page</div>} />
+          <Route path="/settings" element={<div className="p-4">Settings Page</div>} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
